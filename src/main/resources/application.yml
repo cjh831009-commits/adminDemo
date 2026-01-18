@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/appdb
+    username: app
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        format_sql: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+app:
+  jwt:
+    issuer: toy-auth
+    secret: "7f3c2a1d9b0e6c4f8a2d1c7e5b9a0f3d6e8c1a4b7d2f9c0e3a5b8d1c6f2a"
+    access-minutes: 15
+    refresh-days: 14
+    refresh-cookie-name: "refreshToken"
+
+
