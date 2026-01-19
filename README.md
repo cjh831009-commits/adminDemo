@@ -12,6 +12,7 @@ Spring Boot 4 / Java 21 기반의 **관리자 인증·권한 데모 백엔드**�
 - QueryDSL
 - Redis (권한 캐시)
 - JJWT (Access/Refresh Token)
+- 
 
 ## Architecture
 - Hexagonal (Ports & Adapters) + DDD-lite
@@ -20,6 +21,9 @@ Spring Boot 4 / Java 21 기반의 **관리자 인증·권한 데모 백엔드**�
     - `iam.adapter.in.security`: SecurityFilterChain, JWT Filter
     - `iam.adapter.out.persistence`: JPA Entity/Repository, QueryDSL 조회
     - `iam.adapter.out.redis`: Redis 캐시 저장/조회
+    - 
+## ERD
+![ERD](docs/erdplus.png)
 
 ## API Prefix
 - `/openApi/**` : 공개
@@ -29,8 +33,7 @@ Spring Boot 4 / Java 21 기반의 **관리자 인증·권한 데모 백엔드**�
 ## Run
 1) PostgreSQL/Redis 실행
 2) `application.yml` 설정
-3) seed 데이터 주입: `seed.sql` 실행
-4) Boot Run
+3) Boot Run
 
 ## Demo Scenario (HTTP)
 ### 1) Health
@@ -50,3 +53,5 @@ Authorization: `Bearer {accessToken}`
 ## Notes
 - roles를 토큰에 굽지 않고, 그룹 기반 권한을 캐시/DB에서 조회하도록 확장 예정
 - 메뉴 트리/중복 제거/정렬은 데모 단순화를 위해 최소 처리
+
+
