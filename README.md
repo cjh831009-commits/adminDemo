@@ -25,10 +25,8 @@ Spring Boot 4 / Java 21 기반의 **관리자 인증·권한 데모 백엔드**�
 ## ERD
 ![ERD](docs/erdplus.png)
 
-```md
 ## Sequence
 - [Sequence Diagrams](docs/sequence.md)
-```
 
 ## API Prefix
 - `/openApi/**` : 공개
